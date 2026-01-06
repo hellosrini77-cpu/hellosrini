@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srini — Builder & Legal Ops Leader</title>
+    <meta name="description" content="Legal ops veteran from Twitter, Workday, IBM, Cisco, and Amazon. Now building AI-powered tools for teams.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --bg-card: #141414;
+            --bg-hover: #1a1a1a;
+            --accent: #3b82f6;
+            --accent-soft: rgba(59, 130, 246, 0.1);
+            --text: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --border: #27272a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 64px;
+        }
+
+        .greeting {
+            color: var(--accent);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .bio {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 560px;
+        }
+
+        .bio strong {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 56px;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
+        }
+
+        /* Project Cards */
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .project {
+            display: block;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+        }
+
+        .project:hover {
+            background: var(--bg-hover);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .project-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .project-tag {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            background: var(--bg);
+            color: var(--text-muted);
+            border-radius: 6px;
+        }
+
+        /* Experience */
+        .experience {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .exp-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .exp-years {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            min-width: 100px;
+        }
+
+        .exp-details h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .exp-details p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Contact */
+        .contact-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .contact-box p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .contact-email {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .contact-email:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 80px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 48px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .exp-item {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .exp-years {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <p class="greeting">Hey, I'm</p>
+            <h1>Srini 👋</h1>
+            <p class="bio">
+                <strong>Legal ops veteran</strong> from Twitter, Workday, IBM, Cisco, and Amazon. 
+                Ready to drive AI transformation in legal operations.
+            </p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/srinilegal" target="_blank">LinkedIn</a>
+                <a href="https://github.com/hellosrini77-cpu" target="_blank">GitHub</a>
+                <a href="https://www.indiehackers.com/product/seekai-2" target="_blank">Indie Hackers</a>
+                <a href="mailto:srini@hellosrini.com">Email</a>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects">
+                <a href="https://seekai.tech" target="_blank" class="project">
+                    <div class="project-header">
+                        <span class="project-name">🔍 SeekAI</span>
+                        <span class="project-tag">Live</span>
+                    </div>
+                    <p class="project-desc">
+                        Enterprise search for SMBs — Glean for growing teams. Connect Notion, Google Drive, Gmail & Slack. Ask questions, get AI-powered answers with sources. Includes PDF search for contracts.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Claude API</span>
+                        <span class="tech-tag">Notion API</span>
+                        <span class="tech-tag">Google Drive API</span>
+                        <span class="tech-tag">Gmail API</span>
+                        <span class="tech-tag">Slack API</span>
+                        <span class="tech-tag">PDF Parsing</span>
+                    </div>
+                </a>
+
+                <a href="https://iflashcards.app" target="_blank" class="project">
+                    <div class="project-header">
+                        <span class="project-name">🃏 iFlashcards</span>
+                        <span class="project-tag">Live</span>
+                    </div>
+                    <p class="project-desc">
+                        AI-powered flashcard app. Create, study, and master any topic with smart spaced repetition.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PWA</span>
+                        <span class="tech-tag">AI-powered</span>
+                        <span class="tech-tag">Spaced Repetition</span>
+                    </div>
+                </a>
+
+                <a href="https://ebilling-demo-czstgu7o5s9u8dxk4e26cj.streamlit.app/" target="_blank" class="project">
+                    <div class="project-header">
+                        <span class="project-name">⚖️ E-Billing Agent</span>
+                        <span class="project-tag">Demo</span>
+                    </div>
+                    <p class="project-desc">
+                        Multi-agent AI system for legal ops. Automates vendor onboarding, invoice verification, and case assignment to in-house counsel.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">CrewAI</span>
+                        <span class="tech-tag">Multi-Agent</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Legal Ops</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Background</h2>
+            <div class="experience">
+                <div class="exp-item">
+                    <span class="exp-years">20+ years</span>
+                    <div class="exp-details">
+                        <h3>Legal Operations & CLM</h3>
+                        <p>Led teams of 500+ at Twitter, Workday, IBM, Cisco, and Amazon. Implemented enterprise CLM systems. Reduced SLAs by 50%+ through automation.</p>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <span class="exp-years">2024-Now</span>
+                    <div class="exp-details">
+                        <h3>Building in Public</h3>
+                        <p>Shipped AI-powered apps. Learning by doing. Turning 20 years of enterprise pain into products.</p>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <span class="exp-years">Certified</span>
+                    <div class="exp-details">
+                        <h3>AI & Agile</h3>
+                        <p>Anthropic, Google, DeepLearning.AI, Microsoft AI certifications. CSM & CSPO certified.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="contact-box">
+                <h3>Let's connect</h3>
+                <p>Building something? Need a legal ops expert who codes? Let's chat.</p>
+                <a href="/cdn-cgi/l/email-protection#4f3c3d2621260f272a2323203c3d262126612c2022" class="contact-email"><span class="__cf_email__" data-cfemail="4437362d2a2d042c2128282b37362d2a2d6a272b29">[email&#160;protecte
