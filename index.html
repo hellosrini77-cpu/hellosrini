@@ -148,6 +148,11 @@
             font-weight: 500;
         }
 
+        .project-tag.new {
+            background: rgba(34, 197, 94, 0.1);
+            color: #22c55e;
+        }
+
         .project-desc {
             color: var(--text-secondary);
             font-size: 0.95rem;
@@ -275,7 +280,7 @@
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/srinilegal" target="_blank">LinkedIn</a>
                 <a href="https://github.com/hellosrini77-cpu" target="_blank">GitHub</a>
-                <a href="https://www.indiehackers.com/product/seekai-2" target="_blank">Indie Hackers</a>
+                <a href="https://www.indiehackers.com/srinivasnarra" target="_blank">Indie Hackers</a>
                 <a href="mailto:srini@hellosrini.com">Email</a>
             </div>
         </header>
@@ -283,18 +288,33 @@
         <section class="section">
             <h2 class="section-title">Projects</h2>
             <div class="projects">
+                <a href="https://grmc.ai" target="_blank" class="project">
+                    <div class="project-header">
+                        <span class="project-name">🛡️ GRMC.ai</span>
+                        <span class="project-tag new">New</span>
+                    </div>
+                    <p class="project-desc">
+                        AI-powered contract compliance analysis. Upload vendor contracts (DPAs, MSAs, BAAs) and get instant gap analysis against GDPR Art. 28, SOC 2, CCPA/CPRA, and HIPAA frameworks.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Claude API</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Compliance</span>
+                        <span class="tech-tag">Legal Ops</span>
+                        <span class="tech-tag">Vercel</span>
+                    </div>
+                </a>
+
                 <a href="https://ctrlf.tech" target="_blank" class="project">
                     <div class="project-header">
                         <span class="project-name">🔍 CtrlF</span>
                         <span class="project-tag">Live</span>
                     </div>
                     <p class="project-desc">
-                        Ctrl+F for your company. Enterprise search for SMBs — connect Google Drive, Gmail, Notion & Slack. Ask questions, get AI-powered answers with sources.
+                        Ctrl+F for your company. Enterprise search across Notion & Slack. Ask questions, get AI-powered answers with sources.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Claude API</span>
-                        <span class="tech-tag">Google Drive API</span>
-                        <span class="tech-tag">Gmail API</span>
                         <span class="tech-tag">Notion API</span>
                         <span class="tech-tag">Slack API</span>
                         <span class="tech-tag">Vercel</span>
@@ -319,7 +339,7 @@
                 <a href="https://e-billing-demo.vercel.app" target="_blank" class="project">
                     <div class="project-header">
                         <span class="project-name">💼 E-Billing Prototype</span>
-                        <span class="project-tag">New</span>
+                        <span class="project-tag">Demo</span>
                     </div>
                     <p class="project-desc">
                         Legal ops e-billing system with budget tracking, invoice processing (PDF upload), approval workflows, and accruals management. Real-time commitment visibility across Paid, A/P, and Accruals.
